@@ -6,6 +6,6 @@
 <strong>NgIf Example</strong>
 <h1 *ngIf="check">Hello Angular</h1>
 <p #num *ngIf="num%2 == 0 then ref1 else ref2"></p>
-<ng-template #ref1>The number is even.</ng-template>
-<ng-template #ref2>The number is odd.</ng-template>
+<ng-template #ref1>The number {{num}} is even.</ng-template>
+<ng-template #ref2>The number {{num}} is odd.</ng-template>
 <br>
