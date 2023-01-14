@@ -12,8 +12,12 @@ export class ChildComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  check: boolean = true;
+
   myvalue: string = "";
   display(x:any) {
     this.myvalue = x;
   }
+
+  num: number = 37;
 }

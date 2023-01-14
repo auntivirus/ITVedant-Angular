@@ -2,4 +2,10 @@
 <input type="text" #myvalue>
 <input type="submit" value="Submit" (click)="display(myvalue)">
 <span style="margin-left: 0.5em;">{{myvalue.value}}</span>
+<hr>
+<strong>NgIf Example</strong>
+<h1 *ngIf="check">Hello Angular</h1>
+<p #num *ngIf="num%2 == 0 then ref1 else ref2"></p>
+<ng-template #ref1>The number is even.</ng-template>
+<ng-template #ref2>The number is odd.</ng-template>
 <br>
