@@ -1,0 +1,41 @@
+<h1>ABCD</h1>
+<strong>Interpolation - Accessing properties from ts files to html file</strong>
+<hr>
+<p style="color: {{fontcolor}};">Interpolation Example</p>
+<p>{{"ID: "+id}}</p>
+<p>{{"Name: "+name}}</p>
+<p>{{"Salary: "+salary}}</p>
+<hr>
+<strong>Employee's Data using Object</strong>
+<p>{{emp.id}}</p>
+<p>{{emp.name}}</p>
+<p>{{emp.salary}}</p>
+<hr>
+<strong>Style Binding</strong>
+<p [style.color] = "singleStyle">Single Style Binding</p>
+<p [style] = "multipleStyle">Multiple Style Binding</p>
+<hr>
+<strong>Class Binding</strong>
+<p [ngClass]="x">Single Class Binding</p>
+<p [ngClass]="multipleSelector">Multiple Class Binding</p>
+<hr>
+<strong>Conditional Binding</strong>
+<p [style.color] = "condition?'green':'red'">Conditional Binding</p>
+<hr>
+<strong>Two Way Data Binding</strong><br>
+<input type="text" [(ngModel)]="myText">
+<p>Two Way Data Binding text: {{myText}}</p>
+<hr>
+<strong>Event Binding</strong><br>
+<button (click)="func()">Event Binding</button>
+<br>
+<p [style.color] = "setColor">Event Binding E.G. 01</p>
+<input type="submit" (click)="redColor()" value="red">
+<input (click)="blueColor()" type= "submit" value="blue">
+<br>
+<hr>
+<app-child></app-child>
+<hr>
+<app-child2></app-child2>
+
+<router-outlet></router-outlet>
