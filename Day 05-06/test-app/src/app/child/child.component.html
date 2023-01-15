@@ -9,3 +9,46 @@
 <ng-template #ref1>The number {{num}} is even.</ng-template>
 <ng-template #ref2>The number {{num}} is odd.</ng-template>
 <br>
+<hr>
+<strong>NgSwitch E.G. 01</strong>
+<div [ngSwitch]="color">
+    <div [style.color]="color" *ngSwitchCase="'red'">You selected red.</div>
+    <div [style.color]="color" *ngSwitchCase="'yellow'">You selected yellow.</div>
+    <div [style.color]="color" *ngSwitchCase="'green'">You selected green.</div>
+    <div [style.color]="color" *ngSwitchDefault="'*'">You selected NONE.</div>
+</div>
+<strong>NgSwitch E.G. 02</strong>
+<div>
+    <select #operation (click)="op(operation.value)">
+        <option value="add">Addition</option>
+        <option value="sub">Substraction</option>
+        <option value="mul">Multiplication</option>
+        <option value="div">Division</option>
+    </select>
+    <div [ngSwitch]="operation.value">
+        <div *ngSwitchCase="'add'">Addition of {{num1}} and {{num2}} is {{num1+num2}}</div>
+        <div *ngSwitchCase="'sub'">Substraction of {{num1}} and {{num2}} is {{num1-num2}}</div>
+        <div *ngSwitchCase="'mul'">Multiplication of {{num1}} and {{num2}} is {{num1*num2}}</div>
+        <div *ngSwitchCase="'div'">Division of {{num1}} and {{num2}} is {{num1/num2}}</div>
+        <div *ngSwitchDefault="'*'">You selected None</div>
+    </div>
+</div>
+<br>
+<strong>NgFor E.G. 01</strong>
+<div *ngFor="let i of obj1">
+    {{i.id}} ||||| {{i.name}} ||||| {{i.salary}}
+</div>
+<br>
+<strong>NgFor E.G. 02</strong>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>
+    <tr *ngFor="let i of obj1">
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.salary}}</td>
+    </tr>
+</table>

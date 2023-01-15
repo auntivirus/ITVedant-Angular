@@ -72,30 +72,9 @@ func() {
 
       Syntax for variable declaration in TypeScript
       varname : datatype
-*/
-/* Template Reference Variable - 
+
+      Template Reference Variable - 
       Syntax: <input type="text" #reference_var>
 */
-
-/*      Directives - 
-          They are defined as classes that can add new behaviour to the elements in the template or modify existing behaviour.
-          
-        Built-in attribute directives:
-        i.   NgClass
-        ii.  NgStyle
-        iii. NgModel
-
-        Built-in structural directives:
-          It is responsible for HTML Layout.
-          They shape or re-shape DOM structure by adding, removing and manipulating the host element.
-
-          i.   NgIf -
-                  Syntax: <element *ngIf="condition"></element>
-                  OR
-                  Syntax: <element *ngIf="condition then refVar1 else refVar2"></element>
-          ii.  NgSwitch
-          iii. NgFor
-*/
-
 // EOL
 }
